@@ -4,6 +4,7 @@
  */
 const codeCellId = index => `codecell${index}`
 
+<meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | relative_url }}">
 const clipboardButton = id =>
   `<a class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
     <img src="{{ site.images_url | relative_url }}/copy-button.svg" alt="Copy to clipboard">

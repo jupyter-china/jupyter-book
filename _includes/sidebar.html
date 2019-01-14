@@ -4,6 +4,7 @@ _data/toc.yml .
 
 Much of the logic here is to add active classes to the currently active
 section. The currently active section / chapter should be highlighted in the
+<meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | relative_url }}">
 sidebar.
 
 If a chapter or any of its sections are the current page, we should display the

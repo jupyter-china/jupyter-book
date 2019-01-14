@@ -4,6 +4,7 @@
  */
 
 function getJsonFromUrl(url) {
+<meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | relative_url }}">
   var query = url.split('?');
   if (query.length < 2) {
     // No queries so just return false

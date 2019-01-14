@@ -4,6 +4,7 @@
     {
       requestKernel: true,
       binderOptions: {
+<meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | relative_url }}">
         repo: '{{ site.binder_repo_org }}/{{ site.binder_repo_name }}',
         ref: '{{ site.binder_repo_branch }}',
       }

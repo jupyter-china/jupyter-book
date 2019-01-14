@@ -4,6 +4,7 @@
     {% assign hub_app="lab" %}
 {% else %}
     {% assign hub_app="notebook" %}
+<meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | relative_url }}">
 {% endif %}
 
 {% capture interact_url_jupyterhub %}hub/user-redirect/git-pull?repo={{ site.binder_repo_base }}/{{ site.binder_repo_org }}/{{ site.binder_repo_name }}&amp;branch={{ site.binder_repo_branch }}&amp;subPath={{ page.interact_link | url_encode }}&amp;app={{ hub_app }}{% endcapture %}

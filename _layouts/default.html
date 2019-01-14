@@ -4,6 +4,7 @@
   <body>
     <!-- .js-show-sidebar shows sidebar by default -->
     <div id="js-textbook" class="c-textbook js-show-sidebar">
+<meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | relative_url }}">
       {% include sidebar.html %}
       {% include onthispage.html sanitize=true html=content h_min=2 h_max=3 class="toc__menu" %}
 

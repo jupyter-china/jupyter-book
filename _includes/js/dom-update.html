@@ -4,6 +4,7 @@ const runWhenDOMLoaded = cb => {
     cb()
   } else if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', cb)
+<meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | relative_url }}">
   } else {
     document.attachEvent('onreadystatechange', function() {
       if (document.readyState == 'complete') cb()
