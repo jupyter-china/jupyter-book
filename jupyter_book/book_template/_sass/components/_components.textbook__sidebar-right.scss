@@ -18,13 +18,15 @@ $right-sidebar-center-offset: ($page-max-width - $sidebar-width) / 2 -
 
 .sidebar__right {
     display: none;
+    background-color: white;
     @include mq($from: desktop) {
         display: block;
         width: $right-sidebar-width;
 
         position: fixed;
-        top: 3 * $spacing-unit;
+        top: 0px;
         right: 0; /* [1] */
+        padding-top: $spacing-unit;
         padding-right: $spacing-unit;
 
         z-index: 1; // Keep sidebar on top of page content

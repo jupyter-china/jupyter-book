@@ -24,6 +24,12 @@
 {%- endif %}
 {% endblock input %}
 
+{% block markdowncell %}
+<div class="markdowncell{% if 'popout' in cell.metadata.tags %} popout{% endif %}" markdown="1">
+{{ super() }}
+</div>
+{% endblock markdowncell %}
+
 <!-- All output areas -->
 {% block output %}
 <div class="output_wrapper" markdown="1">
