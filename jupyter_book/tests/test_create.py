@@ -145,11 +145,12 @@ def test_upgrade(tmpdir):
 # Helper funcs
 
 
-def is_in(lines, check):
-    is_in = False
+def is_in(lines, check, count=None):
+    is_in = 0
     for line in lines:
         if check in line:
-            is_in = True
+            is_in += 1
+    is_in = is_in > 0 if count is None else is_in == count
     return is_in
 
 
@@ -217,6 +218,9 @@ def test_notebook(tmpdir):
 
     # No interactive outputs
     assert is_in(lines, "has_widgets: false")
+
+    # popout tag is inserted properly
+    assert is_in(lines, 'class="markdowncell popout"', 1)
 
     ###########################################
     # Testing interactive features
